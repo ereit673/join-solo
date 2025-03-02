@@ -1,0 +1,130 @@
+.side-navigation__container {
+  box-shadow: 0px -1px 6px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+nav {
+  
+  display: flex;
+  justify-content: stretch;
+  padding-inline: 16px;
+  gap: 32px;
+}
+
+.side-nav__legal-links-container{
+    display: none;
+}
+
+.side-nav__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 15px 0;
+  gap: 4px;
+  cursor: pointer;
+
+  &:hover .side-nav__img {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(76%) saturate(753%)
+      hue-rotate(195deg) brightness(102%) contrast(103%);
+  }
+
+  &:hover .side-nav__title {
+    color: rgba(69, 137, 255, 1);
+  }
+}
+
+.side-nav__img {
+  max-width: 24px;
+}
+
+.side-nav__title {
+  font-size: 0.75rem;
+  line-height: 18px;
+  color: #42526e;
+}
+
+//  xs
+@media (min-width: 475px) {
+  .side-nav__title {
+    font-size: 0.9375rem;
+  }
+}
+
+//  sm
+//  @media (min-width: 640px) {}
+
+//  md
+//  @media (min-width: 768px) {}
+
+//  lg
+@media (min-width: 1024px) {
+  .side-navigation__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 232px;
+    height: calc(100dvh - 100px);
+    position: relative;
+  }
+
+  nav {
+    
+    flex-direction: column;
+    gap: 15px;
+    padding: 42px 23px;
+  }
+
+  .side-nav__box {
+    flex-direction: row;
+    width: 186px;
+    border-radius: 8px;
+    padding: 8px 30px;
+    justify-content: start;
+    gap: 8px;
+
+    &:hover {
+      background-color: #d2e3ff;
+    }
+
+    &:hover .side-nav__img {
+      filter: none;
+    }
+
+    &:hover .side-nav__title {
+      color: #42526e;
+    }
+  }
+
+  .side-nav__legal-links-container {
+    display: block;
+    margin-bottom: 66px;
+
+    > * + * {
+      margin-top: 16px;
+    }
+  }
+
+  .side-nav__legal-link {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+    padding: 8px;
+    color: #42526e;
+    text-decoration: none;
+
+    &:hover {
+      color: #005dff;
+    }
+  }
+}
+
+//  xl
+//  @media (min-width: 1280px) {}
+
+//  2xl
+//  @media (min-width: 1536px) {}
