@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SummaryComponent } from "./summary/summary.component";
 
 @Component({
@@ -8,5 +8,5 @@ import { SummaryComponent } from "./summary/summary.component";
   styleUrl: './main-section.component.scss',
 })
 export class MainSectionComponent {
-  section: 'Summary' | 'AddTask' | 'Board' | 'Contacts' = 'Summary';
+  @Input({required: true}) section!: 'Summary' | 'AddTask' | 'Board' | 'Contacts';
 }

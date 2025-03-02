@@ -1,7 +1,8 @@
 <app-header></app-header>
 <main>
-    
-    <app-side-nav></app-side-nav>
-    <app-main-section></app-main-section>
+  <app-side-nav></app-side-nav>
+  <app-main-section
+    [section]="section"
+    [style.margin]="section === 'Summary' ? '168.5px auto 0 auto' : '0'"
+  ></app-main-section>
 </main>
-

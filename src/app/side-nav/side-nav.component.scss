@@ -1,16 +1,17 @@
 .side-navigation__container {
   box-shadow: 0px -1px 6px 0px rgba(0, 0, 0, 0.1);
-  position: absolute;
+  background: #fff;
+  position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 999;
 }
 
 nav {
-  
   display: flex;
   justify-content: stretch;
   padding-inline: 16px;
-  gap: 32px;
+  gap: 16px;
 }
 
 .side-nav__legal-links-container{
@@ -51,6 +52,10 @@ nav {
 @media (min-width: 475px) {
   .side-nav__title {
     font-size: 0.9375rem;
+  }
+
+  nav {
+    gap: 32px;
   }
 }
 

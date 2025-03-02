@@ -8,8 +8,9 @@
     "board progress"
     "feedback done";
   gap: 24px 15px;
-  margin-top: 64px;
+  margin-top: 42px;
   margin-inline: 16px;
+  padding-bottom: 84px;
 }
 
 .grid-box {
@@ -18,6 +19,16 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 4px 0px #00000029;
+}
+
+.grid-box__title{
+  font-size: 1.1875rem;
+  font-weight: 400;
+}
+
+.grid-box__item1 {
+  display: flex;
+  align-items: center;
 }
 
 .item-1 {
@@ -33,14 +44,15 @@
   text-align: center;
 }
 
+.summary__urgent-description{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
 .summary__urgent-item1__description {
   display: flex;
   align-items: center;
   font-size: 2.5rem;
-}
-
-.summary__urgent-item1__title {
-  font-size: 1.1875rem;
 }
 
 .summary__urgent-divider {
@@ -79,8 +91,6 @@
 
 .summary__todo_title {
   color: #4589ff;
-  font-size: 1.1875rem;
-  line-height: 22.8px;
 }
 
 .grid-box-white {
@@ -103,9 +113,6 @@
 
 .grid-box-white__title {
   color: #4589ff;
-  font-size: 1.1875rem;
-  font-weight: 400;
-  line-height: 22.8px;
   text-align: center;
   max-width: 8ch;
 }
@@ -126,12 +133,34 @@
   grid-area: done;
 }
 
+.summary__greeting-container {
+  display: none;
+}
+
+.summary__greeting {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 57.6px;
+  color: #2a3647;
+}
+
+.summary__greeting-name {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 76.8px;
+  color: #4589ff;
+  margin-left: 22px;
+}
+
 //  xs
- @media (min-width: 475px) {
+@media (min-width: 475px) {
+  .summary__grid-container {
+    margin-top: 64px;
+  }
   .grid-box-white {
     padding: 15px 40px;
   }
- }
+}
 
 //  sm
 //  @media (min-width: 640px) {}
@@ -141,17 +170,73 @@
 
 //  lg
 @media (min-width: 1024px) {
+  .grid-box {
+    justify-content: center;
+  }
+
+  .grid-box__title{
+    font-size: 1.4375rem;
+  }
+
+  .item-1{
+    gap:32px;
+  }
+
+  .summary__section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+  }
+
+  .summary__urgent-item1__description{
+    margin-bottom:9px;
+    gap: 20px;
+  }
+
   .summary__grid-container {
-    grid-template-rows: repeat(2, 200px);
-    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(4, minmax(100px, min-content));
     grid-template-areas:
       "urg urg urg board"
       "todo progress feedback done";
+    margin-top: 0;
+  }
+
+  .summary__greeting-container {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .summary__urgent-item2__title{
+    font-size: 2.0625rem;
+    margin-bottom:13px;
+  }
+
+  .summary__urgent-item2__subtitle{
+    font-size: 1.4375rem;
+  }
+
+  .summary__urgent-description{
+    font-size: 3rem;
+  }
+
+  .item-2 {
+    flex-direction: column;
+  }
+
+  .summary__todo_title {
+    display: block;
+  }
+
+  .grid-box-white__item1__description{
+    font-size: 3rem;
   }
 }
 
 //  xl
-//  @media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+}
 
 //  2xl
 //  @media (min-width: 1536px) {}

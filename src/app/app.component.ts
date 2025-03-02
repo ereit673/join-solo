@@ -11,4 +11,5 @@ import { MainSectionComponent } from "./main-section/main-section.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  section: 'Summary' | 'AddTask' | 'Board' | 'Contacts' = 'Summary';
 }
