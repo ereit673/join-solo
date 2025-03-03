@@ -1,0 +1,25 @@
+form {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  margin-top: 42px;
+  margin-inline: 16px;
+}
+
+.form__title-input {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 33.6px;
+  padding: 7px 16px;
+  border: unset;
+  border-bottom: 1px solid #D1D1D1;
+
+  &:focus {
+    outline: 0;
+    border-bottom: 1px solid #005dff;
+  }
+  &::placeholder {
+    font-weight: 400;
+    color: #d1d1d1;
+  }
+}
