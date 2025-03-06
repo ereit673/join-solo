@@ -1,37 +1,45 @@
 <form action="" class="form__container">
   <input class="form__title-input" type="text" placeholder="Enter a title" />
-  <div>
-    <label for="description">Description(optional)</label>
-    <textarea name="description" id="description" rows="3"></textarea>
+  <div class="form__input-container">
+    <label class="form__label" for="description"
+      >Description<span>(optional)</span></label
+    >
+    <textarea
+      class="form__description-input"
+      name="description"
+      id="description"
+      rows="3"
+      placeholder="Enter a Description"
+    ></textarea>
   </div>
-  <div>
-    <label for="date">Due date</label>
-    <input name="date" id="date" type="date" />
+  <div class="form__input-container">
+    <label for="date" class="form__label">Due date</label>
+    <input name="date" id="date" type="date" class="form__date-input" />
   </div>
-  <div>
-    <label for="">Priority</label>
+  <div class="form__input-container">
+    <label for="" class="form__label">Priority</label>
     <div>
       <div></div>
       <div></div>
       <div></div>
     </div>
   </div>
-  <div>
-    <label for="assigned">Assigned to (optional)</label>
+  <div class="form__input-container">
+    <label for="assigned" class="form__label">Assigned to (optional)</label>
     <select name="assigned" id="assigned">
-        <option value="" disabled selected>Select contacts to assign</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+      <option value="" disabled selected>Select contacts to assign</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
     </select>
   </div>
-  <div>
-    <label for="category">Category</label>
+  <div class="form__input-container">
+    <label for="category" class="form__label">Category</label>
     <select name="category" id="category">
-        <option value="" disabled selected>Select task category</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+      <option value="" disabled selected>Select task category</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
     </select>
   </div>
 </form>
