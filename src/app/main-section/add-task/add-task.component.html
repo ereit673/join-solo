@@ -19,15 +19,15 @@
   <div class="form__input-container">
     <label for="" class="form__label">Priority</label>
     <div class="form__priority-container">
-      <div class="form__priority-box">
+      <div class="form__priority-box urgent-box" [class.urgent-box-active]="selectedPriority == 'urgent'" (click)="selectPriority('urgent')">
         <span class="form__priority-title">Urgent</span>
         <img src="img/urgent.svg" alt="" class="form__priority-icon">
       </div>
-      <div class="form__priority-box">
+      <div class="form__priority-box medium-box" [class.medium-box-active]="selectedPriority == 'medium'" (click)="selectPriority('medium')">
         <span class="form__priority-title">Medium</span>
         <img src="img/medium.svg" alt="" class="form__priority-icon">
       </div>
-      <div class="form__priority-box">
+      <div class="form__priority-box low-box" [class.low-box-active]="selectedPriority == 'low'" (click)="selectPriority('low')">
         <span class="form__priority-title">Low</span>
         <img src="img/low.svg" alt="" class="form__priority-icon">
       </div>
@@ -35,12 +35,32 @@
   </div>
   <div class="form__input-container">
     <label for="assigned" class="form__label">Assigned to (optional)</label>
-    <select name="assigned" id="assigned">
-      <option value="" disabled selected>Select contacts to assign</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-    </select>
+    <div class="form__assigned-container">
+      <span >Select contacts to assign</span><img src="img/arrow_drop_down.svg" alt="">
+      <div class="form__assigned__contacts-container">
+        <div class="form__assigned__contact-box">
+          <div class="form__assigned__contact-box__item1">
+            <div class="form__assigned__contact-box__initials">AE</div>
+            <span class="form__assigned__contact-name">{{dummy_contacts[0]}}</span>
+          </div>
+          <img class="form__assigned__contact-icon" src="" alt="">
+        </div>
+        <div class="form__assigned__contact-box">
+          <div class="form__assigned__contact-box__item1">
+            <div class="form__assigned__contact-box__initials">AE</div>
+            <span class="form__assigned__contact-name">{{dummy_contacts[1]}}</span>
+          </div>
+          <img class="form__assigned__contact-icon" src="" alt="">
+        </div>
+        <div class="form__assigned__contact-box">
+          <div class="form__assigned__contact-box__item1">
+            <div class="form__assigned__contact-box__initials">AE</div>
+            <span class="form__assigned__contact-name">{{dummy_contacts[2]}}</span>
+          </div>
+          <img class="form__assigned__contact-icon" src="" alt="">
+        </div>
+      </div>
+    </div>
   </div>
   <div class="form__input-container">
     <label for="category" class="form__label">Category</label>
