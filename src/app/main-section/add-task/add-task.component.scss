@@ -4,6 +4,7 @@ form {
   flex-direction: column;
   margin-top: 42px;
   margin-inline: 16px;
+  height: 1000px;
 }
 
 input:focus,
@@ -187,6 +188,22 @@ textarea:focus {
   left: 0;
   width: 100%;
   background-color: white;
+  z-index: 999;
+  display: block;
+}
+
+.form__assigned__contact-box{
+  display: flex;
+
+  border: 1px solid green;
+}
+
+.form__assigned__contact-box__item1{
+  display: flex;
+}
+
+.form__assigned__contact-box__initials{
+  
 }
 
 //  xs
