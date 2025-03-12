@@ -33,32 +33,41 @@
       </div>
     </div>
   </div>
-  <div class="form__input-container">
+  <div class="form__input-container" >
     <label for="assigned" class="form__label">Assigned to (optional)</label>
     <div class="form__assigned-container">
-      <span >Select contacts to assign</span><img src="img/arrow_drop_down.svg" alt="">
-      <div class="form__assigned__contacts-container">
-        <div class="form__assigned__contact-box">
-          <div class="form__assigned__contact-box__item1">
-            <div class="form__assigned__contact-box__initials">AE</div>
-            <span class="form__assigned__contact-name">{{dummy_contacts[0]}}</span>
-          </div>
-          <img class="form__assigned__contact-icon" src="" alt="">
+      <div class="form__assigned__closed" (click)="toggleShowContacts()">
+        <span>Select contacts to assign</span><img src="img/arrow_drop_down.svg" alt="an arrow">
+      </div>
+      <div class="form__assigned__contacts-container" [style.display]="showContacts ? 'block': 'none'">
+        <div class="form__assigned__search-contact-container">
+          <input type="text">
+          <img src="img/arrow_drop_up.svg" alt="an arrow" (click)="toggleShowContacts()">
         </div>
-        <div class="form__assigned__contact-box">
-          <div class="form__assigned__contact-box__item1">
-            <div class="form__assigned__contact-box__initials">AE</div>
-            <span class="form__assigned__contact-name">{{dummy_contacts[1]}}</span>
+        <div class="form__assigned__contacts-wrapper">
+          <div class="form__assigned__contact-box">
+            <div class="form__assigned__contact-box__item1">
+              <div class="form__assigned__contact-box__initials">AE</div>
+              <span class="form__assigned__contact-name">{{dummy_contacts[0]}}</span>
+            </div>
+            <img class="form__assigned__contact-icon" src="img/checkbutton.svg" alt="">
           </div>
-          <img class="form__assigned__contact-icon" src="" alt="">
-        </div>
-        <div class="form__assigned__contact-box">
-          <div class="form__assigned__contact-box__item1">
-            <div class="form__assigned__contact-box__initials">AE</div>
-            <span class="form__assigned__contact-name">{{dummy_contacts[2]}}</span>
+          <div class="form__assigned__contact-box">
+            <div class="form__assigned__contact-box__item1">
+              <div class="form__assigned__contact-box__initials">AE</div>
+              <span class="form__assigned__contact-name">{{dummy_contacts[1]}}</span>
+            </div>
+            <img class="form__assigned__contact-icon" src="img/checkbutton.svg" alt="">
           </div>
-          <img class="form__assigned__contact-icon" src="" alt="">
+          <div class="form__assigned__contact-box">
+            <div class="form__assigned__contact-box__item1">
+              <div class="form__assigned__contact-box__initials">AE</div>
+              <span class="form__assigned__contact-name">{{dummy_contacts[2]}}</span>
+            </div>
+            <img class="form__assigned__contact-icon" src="img/checkbutton.svg" alt="">
+          </div>
         </div>
+        
       </div>
     </div>
   </div>

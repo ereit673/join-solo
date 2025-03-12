@@ -11,8 +11,13 @@ import { DatePipe } from '@angular/common';
 export class AddTaskComponent {
   dummy_contacts = ['name1', 'name2', 'name3'];
   selectedPriority = 'medium'; 
+  showContacts = false;
 
   selectPriority(priority: string){
     this.selectedPriority = priority;
+  }
+
+  toggleShowContacts(){
+    this.showContacts = !this.showContacts;
   }
 }
