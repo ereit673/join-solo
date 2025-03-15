@@ -19,65 +19,156 @@
   <div class="form__input-container">
     <label for="" class="form__label">Priority</label>
     <div class="form__priority-container">
-      <div class="form__priority-box urgent-box" [class.urgent-box-active]="selectedPriority == 'urgent'" (click)="selectPriority('urgent')">
+      <div
+        class="form__priority-box urgent-box"
+        [class.urgent-box-active]="selectedPriority == 'urgent'"
+        (click)="selectPriority('urgent')"
+      >
         <span class="form__priority-title">Urgent</span>
-        <img src="img/urgent.svg" alt="" class="form__priority-icon">
+        <img src="img/urgent.svg" alt="" class="form__priority-icon" />
       </div>
-      <div class="form__priority-box medium-box" [class.medium-box-active]="selectedPriority == 'medium'" (click)="selectPriority('medium')">
+      <div
+        class="form__priority-box medium-box"
+        [class.medium-box-active]="selectedPriority == 'medium'"
+        (click)="selectPriority('medium')"
+      >
         <span class="form__priority-title">Medium</span>
-        <img src="img/medium.svg" alt="" class="form__priority-icon">
+        <img src="img/medium.svg" alt="" class="form__priority-icon" />
       </div>
-      <div class="form__priority-box low-box" [class.low-box-active]="selectedPriority == 'low'" (click)="selectPriority('low')">
+      <div
+        class="form__priority-box low-box"
+        [class.low-box-active]="selectedPriority == 'low'"
+        (click)="selectPriority('low')"
+      >
         <span class="form__priority-title">Low</span>
-        <img src="img/low.svg" alt="" class="form__priority-icon">
+        <img src="img/low.svg" alt="" class="form__priority-icon" />
       </div>
     </div>
   </div>
-  <div class="form__input-container" >
+
+  <div class="form__input-container">
     <label for="assigned" class="form__label">Assigned to (optional)</label>
     <div class="form__assigned-container">
       <div class="form__assigned__closed" (click)="toggleShowContacts()">
-        <span>Select contacts to assign</span><img src="img/arrow_drop_down.svg" alt="an arrow">
+        <span>Select contacts to assign</span
+        ><img src="img/arrow_drop_down.svg" alt="an arrow" />
       </div>
-      <div class="form__assigned__contacts-container" [style.display]="showContacts ? 'block': 'none'">
+      <div
+        class="form__assigned__contacts-container"
+        [style.display]="showContacts ? 'block' : 'none'"
+      >
         <div class="form__assigned__search-contact-container">
-          <input type="text">
-          <img src="img/arrow_drop_up.svg" alt="an arrow" (click)="toggleShowContacts()">
+          <input type="text" />
+          <img
+            src="img/arrow_drop_up.svg"
+            alt="an arrow"
+            (click)="toggleShowContacts()"
+          />
         </div>
         <div class="form__assigned__contacts-wrapper">
           <div class="form__assigned__contact-box">
             <div class="form__assigned__contact-box__item1">
               <div class="form__assigned__contact-box__initials">AE</div>
-              <span class="form__assigned__contact-name">{{dummy_contacts[0]}}</span>
+              <span class="form__assigned__contact-name">{{
+                dummy_contacts[0]
+              }}</span>
             </div>
-            <img class="form__assigned__contact-icon" src="img/checkbutton.svg" alt="">
+            <img
+              class="form__assigned__contact-icon"
+              src="img/checkbutton.svg"
+              alt=""
+            />
           </div>
           <div class="form__assigned__contact-box">
             <div class="form__assigned__contact-box__item1">
               <div class="form__assigned__contact-box__initials">AE</div>
-              <span class="form__assigned__contact-name">{{dummy_contacts[1]}}</span>
+              <span class="form__assigned__contact-name">{{
+                dummy_contacts[1]
+              }}</span>
             </div>
-            <img class="form__assigned__contact-icon" src="img/checkbutton.svg" alt="">
+            <img
+              class="form__assigned__contact-icon"
+              src="img/checkbutton.svg"
+              alt=""
+            />
           </div>
           <div class="form__assigned__contact-box">
             <div class="form__assigned__contact-box__item1">
               <div class="form__assigned__contact-box__initials">AE</div>
-              <span class="form__assigned__contact-name">{{dummy_contacts[2]}}</span>
+              <span class="form__assigned__contact-name">{{
+                dummy_contacts[2]
+              }}</span>
             </div>
-            <img class="form__assigned__contact-icon" src="img/checkbutton.svg" alt="">
+            <img
+              class="form__assigned__contact-icon"
+              src="img/checkbutton.svg"
+              alt=""
+            />
           </div>
         </div>
-        
       </div>
     </div>
   </div>
+
   <div class="form__input-container">
     <label for="category" class="form__label">Category</label>
-    <select name="category" id="category">
-      <option value="" disabled selected>Select task category</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-    </select>
+    <div
+      class="form__category-container"
+      [style.borderBottom]="showCategories ? 'none' : '1px solid #d1d1d1'"
+    >
+      <div class="form__category__closed" (click)="toggleShowCategories()">
+        <span>Select task category</span
+        ><img src="img/arrow_drop_down.svg" alt="an arrow" />
+      </div>
+      <div class="form__category__open">
+        <div
+          class="form__assigned__category-container"
+          [style.display]="showCategories ? 'flex' : 'none'"
+        >
+          <span>Select task category</span>
+          <img
+            src="img/arrow_drop_up.svg"
+            alt="an arrow"
+            (click)="toggleShowCategories()"
+          />
+        </div>
+        <div
+          class="form__assigned__category-wrapper"
+          [style.display]="showCategories ? 'block' : 'none'"
+        >
+          <span class="form__assigned__category"> Technical Task </span>
+          <span class="form__assigned__category"> User Story </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form__input-container">
+    <label for="subtask" class="form__label"
+      >Subtasks <span>(optional)</span></label
+    >
+    <div class="form__subtasks-container">
+      <div class="form__subtasks__closed">
+        <input
+        
+          placeholder="Add new subtask"
+          type="text"
+          class="form__subtasks__closed-input"
+        />
+        <div class="form__subtasks__closed-icons-wrapper">
+          <img src="img/addsubtask.svg" alt="plus sign" />
+        </div>
+      </div>
+    </div>
+    <ul class="form__subtasks__list-container">
+      <li class="form__subtasks__list-item">
+        <span>test</span>
+        <div class="form__subtasks__list-item__icon-container">
+          <img src="img/editpen.svg" alt="a pen" />
+          <div class="form__subtasks__list-item__divider"></div>
+          <img src="img/delete.svg" alt="a trash bin" />
+        </div>
+      </li>
+    </ul>
   </div>
 </form>

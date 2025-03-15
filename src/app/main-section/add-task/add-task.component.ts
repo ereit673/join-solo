@@ -12,6 +12,7 @@ export class AddTaskComponent {
   dummy_contacts = ['name1', 'name2', 'name3'];
   selectedPriority = 'medium'; 
   showContacts = false;
+  showCategories = false;
 
   selectPriority(priority: string){
     this.selectedPriority = priority;
@@ -19,5 +20,9 @@ export class AddTaskComponent {
 
   toggleShowContacts(){
     this.showContacts = !this.showContacts;
+  }
+
+  toggleShowCategories(){
+    this.showCategories = !this.showCategories;
   }
 }
