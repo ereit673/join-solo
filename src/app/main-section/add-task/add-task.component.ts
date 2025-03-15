@@ -10,6 +10,20 @@ import { DatePipe } from '@angular/common';
 })
 export class AddTaskComponent {
   dummy_contacts = ['name1', 'name2', 'name3'];
+  subtasks = [
+    {description: 'subtask1',
+      id: '1'
+    },
+    {description: 'subtask2',
+      id: '2'
+    },
+    {description: 'subtask3',
+      id: '3'
+    },
+    {description: 'subtask4',
+      id: '4'
+    }
+  ];
   selectedPriority = 'medium'; 
   showContacts = false;
   showCategories = false;

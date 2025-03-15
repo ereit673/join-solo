@@ -150,7 +150,6 @@
     <div class="form__subtasks-container">
       <div class="form__subtasks__closed">
         <input
-        
           placeholder="Add new subtask"
           type="text"
           class="form__subtasks__closed-input"
@@ -161,14 +160,16 @@
       </div>
     </div>
     <ul class="form__subtasks__list-container">
+      @for (subtask of subtasks; track subtask.id){
       <li class="form__subtasks__list-item">
-        <span>test</span>
+        <span>{{ subtask.description }}</span>
         <div class="form__subtasks__list-item__icon-container">
           <img src="img/editpen.svg" alt="a pen" />
           <div class="form__subtasks__list-item__divider"></div>
           <img src="img/delete.svg" alt="a trash bin" />
         </div>
       </li>
+      }
     </ul>
   </div>
 </form>
