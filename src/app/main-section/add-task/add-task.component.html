@@ -164,9 +164,17 @@
       <li class="form__subtasks__list-item">
         <span>{{ subtask.description }}</span>
         <div class="form__subtasks__list-item__icon-container">
-          <img src="img/editpen.svg" alt="a pen" />
+          <img src="img/editpen.svg" alt="a pen" (click)="toggleEditSubtask(subtask.id)"/>
           <div class="form__subtasks__list-item__divider"></div>
           <img src="img/delete.svg" alt="a trash bin" />
+        </div>
+        <div class="form__subtasks__edit-subtask-container" [style.display]="editingSubtask![subtask.id] ? 'flex' : 'none'">
+          <input type="text" class="form__subtasks__edit-subtask__input">
+          <div class="form__subtasks__edit-subtask__icon-container">
+            <img src="img/delete.svg" alt="a trash bin" />
+            <div class="form__subtasks__list-item__divider"></div>
+            <img src="img/check.svg" alt="a tick" (click)="toggleEditSubtask(subtask.id)">
+          </div>
         </div>
       </li>
       }

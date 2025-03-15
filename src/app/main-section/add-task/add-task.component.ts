@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 
@@ -8,7 +8,7 @@ import { DatePipe } from '@angular/common';
   templateUrl: './add-task.component.html',
   styleUrl: './add-task.component.scss',
 })
-export class AddTaskComponent {
+export class AddTaskComponent{
   dummy_contacts = ['name1', 'name2', 'name3'];
   subtasks = [
     {description: 'subtask1',
@@ -27,6 +27,12 @@ export class AddTaskComponent {
   selectedPriority = 'medium'; 
   showContacts = false;
   showCategories = false;
+  editingSubtask?: {[key: string]: boolean} = {
+    '1': false,
+    '2': false,
+    '3': false,
+    '4': false
+  };
 
   selectPriority(priority: string){
     this.selectedPriority = priority;
@@ -38,5 +44,10 @@ export class AddTaskComponent {
 
   toggleShowCategories(){
     this.showCategories = !this.showCategories;
+  }
+
+  toggleEditSubtask(subtaskId: string){
+      this.editingSubtask![subtaskId] = !this.editingSubtask![subtaskId]; 
+    
   }
 }
