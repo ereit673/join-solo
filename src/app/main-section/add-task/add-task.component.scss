@@ -1,10 +1,17 @@
 form {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   margin-top: 42px;
   margin-inline: 16px;
-  height: 1000px;
+  position: relative;
+  height: 100%;  
+}
+
+.form__fields-container{
+  border: 1px solid red;
+  overflow-y: auto;
+  // height: 1000px;
+  // margin-bottom: 150px;
 }
 
 input:focus,
@@ -24,6 +31,7 @@ textarea:focus {
   padding: 7px 16px;
   border: unset;
   border-bottom: 1px solid #d1d1d1;
+  max-width:100%;
 
   &:hover {
     border-bottom: 1px solid #4589ff;
@@ -365,6 +373,22 @@ border-bottom: 1px solid #005DFF;
   img {
     padding: 5px;
   }
+}
+
+.form__btn-container{
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  position:fixed;
+  bottom: 75px;
+  left: 0;
+  width: 100%;
+  padding: 12px 0;
+}
+
+.btn__primary, .btn__secondary{
+  min-width: 130px;
 }
 
 
