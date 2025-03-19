@@ -25,6 +25,7 @@ textarea:focus {
 .form__input-container {
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 
 .form__title-input {
@@ -434,7 +435,7 @@ textarea:focus {
     font-size: 2rem;
   }
 
-  .form__label, .form__description-input, .form__date-input, .form__priority-box{
+  .form__label, .form__description-input, .form__date-input, .form__priority-box, .form__subtasks__closed-input{
     font-size: 1.1875rem;
   }
 
