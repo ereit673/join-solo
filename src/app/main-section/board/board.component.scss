@@ -75,8 +75,12 @@ section {
   margin-left: 10px;
 }
 
-.board_tasks-container {
+.board__tasks-container {
   margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
 }
 
 .board__title-container {
