@@ -127,6 +127,11 @@ section {
   transition: all 0.1s ease-out;
 }
 
+.board__card-small-container{
+  display: flex;
+  overflow: auto;
+  gap: 16px;
+}
 //  xs
 @media (min-width: 475px) {
   .board__topbar {
