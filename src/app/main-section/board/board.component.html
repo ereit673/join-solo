@@ -1,1 +1,62 @@
-<p>board works!</p>
+<section>
+  <div class="board__topbar">
+    <div class="board__search-container">
+      <input class="board__search-input" type="text" placeholder="Find Task" />
+      <div class="board__search-divider"></div>
+      <div class="board__search-icon__container">
+        <img
+          class="board__search-icon"
+          src="img/search.svg"
+          alt="a magnyfying glass"
+        />
+      </div>
+    </div>
+    <button class="btn__primary">
+      Add task
+      <img class="board__btn-icon" src="img/plus.svg" alt="A plus sign" />
+    </button>
+  </div>
+
+  <div class="board_tasks-container">
+    <div class="board__item-container">
+      <div class="board__title-container">
+        <h2 class="board__title">To do</h2>
+        <div class="board__title-icon__wrapper">
+          <img class="board__title-icon" src="img/plusblue.svg" alt="" />
+        </div>
+      </div>
+      <app-no-task></app-no-task>
+    </div>
+
+    <div class="board__item-container">
+      <div class="board__title-container">
+        <h2 class="board__title">In progress</h2>
+        <div class="board__title-icon__wrapper">
+          <img class="board__title-icon" src="img/plusblue.svg" alt="" />
+        </div>
+      </div>
+      <app-no-task></app-no-task>
+    </div>
+
+    <div class="board__item-container">
+      <div class="board__title-container">
+        <h2 class="board__title">Await feedback</h2>
+        <div class="board__title-icon__wrapper">
+          <img class="board__title-icon" src="img/plusblue.svg" alt="" />
+        </div>
+      </div>
+      <app-no-task></app-no-task>
+    </div>
+
+    <div class="board__item-container">
+      <div class="board__title-container">
+        <h2 class="board__title">Await done</h2>
+        <div class="board__title-icon__wrapper">
+          <img class="board__title-icon" src="img/plusblue.svg" alt="" />
+        </div>
+      </div>
+      <app-no-task></app-no-task>
+    </div>
+
+  </div>
+</section>
