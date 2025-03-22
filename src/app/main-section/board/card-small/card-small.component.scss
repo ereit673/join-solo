@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 252px;
+  min-width: 252px;
+    max-width: 252px;
 }
 
 .task-card__title {

@@ -81,15 +81,12 @@ section {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-
 }
 
 .board__title-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
 }
 
 .board__title {
@@ -133,6 +130,13 @@ section {
   display: flex;
   overflow: auto;
   gap: 16px;
+  padding-top:16px;
+  padding-bottom:24px;
+
+}
+
+app-no-task{
+  width: 100%;
 }
 //  xs
 @media (min-width: 475px) {
@@ -165,7 +169,7 @@ section {
     height: calc(100% - 101px);
     padding: 73.5px 65px;
   }
-  .board_tasks-container {
+  .board__tasks-container {
     margin-top: 49.5px;
   }
   .board__title-icon__wrapper {
