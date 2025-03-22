@@ -1,5 +1,7 @@
 section {
   padding: 64px 16px;
+  height: calc(100% - 84px - 76px);
+  overflow-y: scroll;
 }
 
 .board__search-container {
@@ -151,11 +153,16 @@ section {
 }
 
 //  md
-//  @media (min-width: 768px) {}
+ @media (min-width: 768px) {
+  section {
+    height: calc(100% - 101px - 76px);
+  }
+ }
 
 //  lg
 @media (min-width: 1024px) {
   section {
+    height: calc(100% - 101px);
     padding: 73.5px 65px;
   }
   .board_tasks-container {
