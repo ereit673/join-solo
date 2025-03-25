@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 24px;
   min-width: 252px;
-    max-width: 252px;
+  max-width: 252px;
 }
 
 .task-card__title {
@@ -36,10 +36,10 @@
   white-space: normal; /* Allows the text to wrap normally */
 }
 
-.task-card__subtasks{
-    display: flex;
-    align-items: center;
-    gap:11px;
+.task-card__subtasks {
+  display: flex;
+  align-items: center;
+  gap: 11px;
 }
 
 .task-card__subtask-progress {
@@ -50,35 +50,35 @@
 }
 
 .task-card__subtask-progress-inner {
-  height: 100%; 
-  background-color: #4589ff; 
-  width: 50%; 
+  height: 100%;
+  background-color: #4589ff;
+  width: 50%;
   border-radius: 16px;
 }
 
-.task-card__subtask-count{
-    font-size: 0.8125rem;
+.task-card__subtask-count {
+  font-size: 0.8125rem;
 }
 
-.task-card__team{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.task-card__team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.task-card__team-members{
-    display: flex;
-    
-    > * + *{
-        margin-left: -10px;
-    }
+.task-card__team-members {
+  display: flex;
+
+  > * + * {
+    margin-left: -10px;
+  }
 }
 
-.task-card__team-member{
-    font-size: 0.75rem;
-    background-color: #FF7A00;
-    border: 1px solid #FFF;
-    border-radius: 50%;
-    padding: 8px;
-    color: white;
+.task-card__team-member {
+  font-size: 0.75rem;
+  background-color: #ff7a00;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 8px;
+  color: white;
 }

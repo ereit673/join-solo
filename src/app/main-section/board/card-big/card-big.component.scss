@@ -1,0 +1,131 @@
+.dialog__container {
+  width: 90%;
+  max-width: 396px;
+  margin-inline: auto;
+  padding: 32px 24px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 4px 0px #00000029;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dialog__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog__title {
+  background-color: #ff7a00;
+  color: #fff;
+  border-radius: 8px;
+  padding: 4px 16px;
+}
+
+.dialog__heading {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.dialog__due-date,
+.dialog__priority {
+  display: flex;
+  gap: 25px;
+}
+
+.dialog__due-date-label,
+.dialog__priority-label,
+.dialog__assigned-label,
+.dialog__subtasks-label {
+  color: #42526e;
+  font-weight: 700;
+}
+
+.dialog__assigned {
+}
+
+.dialog__assigned-label,
+.dialog__subtasks-label {
+  margin-bottom: 8px;
+}
+
+.dialog__assigned-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dialog__assigned-person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 7px 16px;
+}
+
+.dialog__assigned-initials {
+  font-size: 0.75rem;
+  background-color: #ff7a00;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 16px;
+  color: white;
+}
+
+.dialog__subtasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dialog__subtask {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.dialog__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-end;
+}
+
+.dialog__button {
+  display: flex;
+  gap: 8px;
+}
+
+.dialog__divider {
+  width: 1px;
+  height: 24px;
+  background-color: #d1d1d1;
+}
+
+//  xs
+@media (min-width: 475px) {
+  .dialog__container {
+    max-width: 468px;
+  }
+}
+
+//  sm
+@media (min-width: 640px) {
+  .dialog__container {
+    max-width: 528px;
+  }
+}
+
+//  md
+@media (min-width: 768px) {
+}
+
+//  lg
+@media (min-width: 1024px) {
+}
+
+//  xl
+//  @media (min-width: 1280px) {}
+
+//  2xl
+//  @media (min-width: 1536px) {}

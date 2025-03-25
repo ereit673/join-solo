@@ -128,15 +128,29 @@ section {
 
 .board__card-small-container{
   display: flex;
-  overflow: auto;
+  overflow-x: auto;
   gap: 16px;
   padding-top:16px;
   padding-bottom:24px;
-
+  padding-inline:8px;
 }
 
 app-no-task{
   width: 100%;
+}
+
+.dialog-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 //  xs
 @media (min-width: 475px) {
@@ -168,9 +182,20 @@ app-no-task{
   section {
     height: calc(100% - 101px);
     padding: 73.5px 65px;
+    overflow-y: hidden;
   }
   .board__tasks-container {
     margin-top: 49.5px;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .board__card-small-container{
+    flex-direction: column;
+    min-width: 252px;
+    overflow-x:unset;
+    overflow-y:auto;
+    max-height: 500px;
   }
   .board__title-icon__wrapper {
     border-radius: 8px;

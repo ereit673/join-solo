@@ -1,1 +1,77 @@
-<p>card-big works!</p>
+<div class="dialog__container">
+  <div class="dialog__header">
+    <p class="dialog__title">User Story</p>
+    <img class="dialog__close-icon" src="img/close.svg" alt="an x sign" />
+  </div>
+  <h2 class="dialog__heading">Kochwelt Page & Recipe Recommender</h2>
+  <p class="dialog__description">
+    Build start page with recipe recommendation.
+  </p>
+
+  <div class="dialog__due-date">
+    <p class="dialog__due-date-label">Due date:</p>
+    <p class="dialog__due-date-value">10/05/2023</p>
+  </div>
+  <div class="dialog__priority">
+    <p class="dialog__priority-label">Priority:</p>
+    <p class="dialog__priority-value">
+      Medium
+      <img
+        class="dialog__priority-icon"
+        src="img/medium.svg"
+        alt="an equal sign"
+      />
+    </p>
+  </div>
+  <div class="dialog__assigned">
+    <p class="dialog__assigned-label">Assigned To:</p>
+    <div class="dialog__assigned-list">
+      <div class="dialog__assigned-person">
+        <p class="dialog__assigned-initials">EM</p>
+        <p class="dialog__assigned-name">Emmanuel Mauer</p>
+      </div>
+      <div class="dialog__assigned-person">
+        <p class="dialog__assigned-initials">MB</p>
+        <p class="dialog__assigned-name">Marcel Bauer</p>
+      </div>
+      <div class="dialog__assigned-person">
+        <p class="dialog__assigned-initials">AM</p>
+        <p class="dialog__assigned-name">Anton Mayer</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog__subtasks">
+    <p class="dialog__subtasks-label">Subtasks</p>
+    <div class="dialog__subtasks-list">
+      <div class="dialog__subtask">
+        <img
+          class="dialog__subtask-checkbox"
+          src="img/checkbutton.svg"
+          alt="a checkbox"
+        />
+        <p class="dialog__subtask-title">Implement Recipe Recommendation</p>
+      </div>
+      <div class="dialog__subtask">
+        <img
+          class="dialog__subtask-checkbox"
+          src="img/checkbutton.svg"
+          alt="a checkbox"
+        />
+        <p class="dialog__subtask-title">Start Page Layout</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog__actions">
+    <button class="dialog__button dialog__button--delete">
+      <img class="dialog__button-icon" src="img/delete.svg" alt="trash icon" />
+      <span>Delete</span>
+    </button>
+    <div class="dialog__divider"></div>
+    <button class="dialog__button dialog__button--edit">
+      <img class="dialog__button-icon" src="img/editpen.svg" alt="edit icon" />
+      <span>Edit</span>
+    </button>
+  </div>
+</div>
