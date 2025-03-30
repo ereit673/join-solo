@@ -1,0 +1,242 @@
+.card__container{
+    overflow-y: scroll;
+    max-height: 672px;
+}
+
+.card__header {
+  font-size: 2rem;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  padding: 13px 16px;
+
+  &:hover {
+    border-bottom: 1px solid #4589ff;
+  }
+
+  &:focus {
+    border-bottom: 1px solid #005dff;
+  }
+  &::placeholder {
+    font-weight: 400;
+    color: #d1d1d1;
+  }
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: #42526e;
+}
+
+.form__textarea {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #d1d1d1;
+  padding: 18px 16px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  max-height: 200px;
+  outline: none;
+
+  &:hover {
+    border: 1px solid #005dff;
+  }
+
+  &:focus {
+    border: 1px solid #005dff;
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    color: #d1d1d1;
+  }
+}
+
+.form__date {
+  font-family: inherit;
+  color: #d1d1d1;
+  padding: 12px 16px;
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+  cursor: pointer;
+  outline: none;
+
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(39%) sepia(67%) saturate(4835%) hue-rotate(192deg)
+      brightness(92%) contrast(93%);
+    scale: 1.2;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #005dff;
+  }
+
+  &:focus {
+    border-bottom: 1px solid #005dff;
+  }
+}
+
+.form__priority-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form__priority-box {
+  border-radius: 10px;
+  padding: 14px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0px 0px 4px 0px #00000029;
+  min-width: 80px;
+  font-size: 0.75rem;
+  flex: 1;
+  cursor: pointer;
+}
+
+.urgent-box {
+  &:hover {
+    border-bottom: 2px solid #ff3d00;
+  }
+}
+
+.urgent-box-active {
+  background: #ff3d00;
+  color: white;
+  img {
+    filter: invert(1) sepia(1) saturate(0) brightness(1000%);
+  }
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.medium-box {
+  &:hover {
+    border-bottom: 2px solid #ffa800;
+  }
+}
+
+.medium-box-active {
+  background: #ffa800;
+  color: white;
+  img {
+    filter: invert(1) sepia(1) saturate(0) brightness(1000%);
+  }
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.low-box {
+  &:hover {
+    border-bottom: 2px solid #7ae229;
+  }
+}
+
+.low-box-active {
+  background: #7ae229;
+  color: white;
+  img {
+    filter: invert(1) sepia(1) saturate(0) brightness(1000%);
+  }
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.form__assigned-container {
+  border-bottom: 1px solid #d1d1d1;
+  position: relative;
+  &:hover {
+    border-bottom: 1px solid #4589ff;
+  }
+}
+
+.form__assigned__closed {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.form__assigned__contacts-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 999;
+}
+
+.form__assigned__search-contact-container {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #005dff;
+
+  input {
+    width: 100%;
+    outline: 0;
+    border: 0;
+  }
+}
+
+.form__assigned__contacts-wrapper {
+  max-height: 288px;
+  overflow-y: auto;
+}
+
+.form__assigned__contact-box {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 7px 16px;
+  &:hover {
+    background-color: #d2e3ff;
+  }
+}
+
+.form__assigned__contact-box__item1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.form__assigned__contact-box__initials {
+  font-size: 0.75rem;
+  vertical-align: middle;
+  background-color: #00bee8;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 12px;
+}
+
+
+.form__initials-container{
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.form__btn{
+    float: right;
+    margin-top: 24px;
+}

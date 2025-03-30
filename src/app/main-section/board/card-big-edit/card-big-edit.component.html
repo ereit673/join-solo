@@ -1,1 +1,119 @@
-<p>card-big-edit works!</p>
+<div class="card__container">
+  <input type="text" class="card__header" placeholder="Task Title" />
+
+  <div class="form__group">
+    <label for="description" class="form__label">Description</label>
+    <textarea
+      name="description"
+      id="description"
+      class="form__textarea"
+    ></textarea>
+  </div>
+
+  <div class="form__group">
+    <label for="due_date" class="form__label">Due Date</label>
+    <input type="date" id="due_date" name="due_date" class="form__date" />
+  </div>
+
+  <div class="form__group">
+    <label for="priority" class="form__label">Priority</label>
+    <div class="form__priority-container">
+      <div
+        class="form__priority-box urgent-box"
+        [class.urgent-box-active]="selectedPriority == 'urgent'"
+        (click)="selectPriority('urgent')"
+      >
+        <span class="form__priority-title">Urgent</span>
+        <img src="img/urgent.svg" alt="" class="form__priority-icon" />
+      </div>
+      <div
+        class="form__priority-box medium-box"
+        [class.medium-box-active]="selectedPriority == 'medium'"
+        (click)="selectPriority('medium')"
+      >
+        <span class="form__priority-title">Medium</span>
+        <img src="img/medium.svg" alt="" class="form__priority-icon" />
+      </div>
+      <div
+        class="form__priority-box low-box"
+        [class.low-box-active]="selectedPriority == 'low'"
+        (click)="selectPriority('low')"
+      >
+        <span class="form__priority-title">Low</span>
+        <img src="img/low.svg" alt="" class="form__priority-icon" />
+      </div>
+    </div>
+  </div>
+
+  <div class="form__input-container">
+    <label for="assigned" class="form__label">Assigned to</label>
+    <div class="form__assigned-container">
+      <div class="form__assigned__closed" (click)="toggleShowContacts()">
+        <span>Select contacts to assign</span
+        ><img src="img/arrow_drop_down.svg" alt="an arrow" />
+      </div>
+      <div
+        class="form__assigned__contacts-container"
+        [style.display]="showContacts ? 'block' : 'none'"
+      >
+        <div class="form__assigned__search-contact-container">
+          <input type="text" />
+          <img
+            src="img/arrow_drop_up.svg"
+            alt="an arrow"
+            (click)="toggleShowContacts()"
+          />
+        </div>
+        <div class="form__assigned__contacts-wrapper">
+          <div class="form__assigned__contact-box">
+            <div class="form__assigned__contact-box__item1">
+              <div class="form__assigned__contact-box__initials">AE</div>
+              <span class="form__assigned__contact-name">{{
+                dummy_contacts[0]
+              }}</span>
+            </div>
+            <img
+              class="form__assigned__contact-icon"
+              src="img/checkbutton.svg"
+              alt=""
+            />
+          </div>
+          <div class="form__assigned__contact-box">
+            <div class="form__assigned__contact-box__item1">
+              <div class="form__assigned__contact-box__initials">AE</div>
+              <span class="form__assigned__contact-name">{{
+                dummy_contacts[1]
+              }}</span>
+            </div>
+            <img
+              class="form__assigned__contact-icon"
+              src="img/checkbutton.svg"
+              alt=""
+            />
+          </div>
+          <div class="form__assigned__contact-box">
+            <div class="form__assigned__contact-box__item1">
+              <div class="form__assigned__contact-box__initials">AE</div>
+              <span class="form__assigned__contact-name">{{
+                dummy_contacts[2]
+              }}</span>
+            </div>
+            <img
+              class="form__assigned__contact-icon"
+              src="img/checkbutton.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form__initials-container">
+    <div class="form__assigned__contact-box__initials">AE</div>
+    <div class="form__assigned__contact-box__initials">AE</div>
+    <div class="form__assigned__contact-box__initials">AE</div>
+  </div>
+</div>
+<button class="btn__primary form__btn">
+  Ok <img src="img/checkwhite.svg" alt="A tick" />
+</button>
